@@ -21,7 +21,7 @@ func main() {
 			break
 		}
 
-		if string(line) == "---" {
+		if strings.Contains(string(line), "DirectorJobRunner: Manifest:") {
 			startRead = true
 			continue
 		}
