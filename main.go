@@ -14,7 +14,8 @@ const manifestStartToken = "DirectorJobRunner: Manifest:"
 func main() {
 	manifest, err := extractManifest()
 	if err != nil {
-		panic(err)
+		fmt.Printf("ERROR: %v\n", err)
+		os.Exit(1)
 	}
 
 	fmt.Print(manifest)
